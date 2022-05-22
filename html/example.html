@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Примеры Программ</title>
+  <link rel="stylesheet" href="../css/example.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+
+
+  <!-- ___________________________________________________________  -->
+  <title>Порядок карт</title>
+  <style type="text/css">
+    .card IMG {
+      position: relative;
+    }
+
+    .two {
+      top: 50px;
+      left: 55px;
+      z-index: 5;
+    }
+
+    .twotwo {
+      left: -120px;
+      top: 25px;
+      z-index: 2;
+    }
+
+    .ten {
+      left: -295px;
+      z-index: 1;
+    }
+
+    .card IMG:hover {
+      z-index: 10;
+    }
+  </style>
+  <!-- ___________________________________________________________ Код Для карт -->
+</head>
+
+<body id="bb" onload="doWave('Nigggggggggggggggggggggggggggggggggggggggggggggggggggggggers', 1)">
+
+  <!-- ___________________________________________________________ -->
+  <div class="background">
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+
+
+    <!-- ___________________________________________________________ фон и кубы на заднем фоне -->
+
+
+
+    <!-- ___________________________________________________________ -->
+    <h2>Игра: Крестики Нолики (Лучшее Что Я Делал, И По Не Понятной Прчине Переставшее Работать...)</h2>
+    <div id="game">
+      <div class="table">
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+            <td>
+              <div class="inner"></div>
+            </td>
+            <td>
+              <div class="inner"></div>
+            </td>
+            <td>
+              <div class="inner"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="inner"></div>
+            </td>
+            <td>
+              <div class="inner"></div>
+            </td>
+            <td>
+              <div class="inner"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="inner"></div>
+            </td>
+            <td>
+              <div class="inner"></div>
+            </td>
+            <td>
+              <div class="inner"></div>
+            </td>
+          </tr>
+        </table>
+        <div class="winning"></div>
+      </div>
+      <div id="win_block">
+        <span class="winner"></span>
+        <span class="again">Ещё каточку?)</span>
+      </div>
+    </div>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ Крестики Нолики -->
+
+
+
+    <!-- \ ___________________________________________________________ -->
+    <h1>Управляй Картинкой С Помощью Стрелок!</h1>
+    <img id="кчау" src="../app/кчау.jpg" onclick="My();">
+    <img id="стрелка_вправо" src="../app/стрелка вправо.jpg" onclick="My_vpravo();">
+    <img id="стрелка_влево" src="../app/стрелка влево.jpg" onclick="My_vlevo();">
+    <img id="стрелка_вниз" src="../app/стрелка вниз.jpg" onclick="My();">
+    <img id="стрелка_вверх" src="../app/стрелка вверх.png" onclick="My_vverx();">
+
+    <script>
+      var x = 10;
+
+      function My() {
+        x = x + 100;
+        element = document.getElementById("кчау");
+        element.style.top = x + "px";
+      }
+
+      function My_vpravo() {
+        x = x + 100;
+        element = document.getElementById("кчау");
+        element.style.left = x + "px";
+      }
+
+      function My_vlevo() {
+        x = x - 100;
+        element = document.getElementById("кчау");
+        element.style.left = x + "px";
+      }
+
+      function My_vverx() {
+        x = x - 100;
+        element = document.getElementById("кчау");
+        element.style.top = x + "px";
+      }
+    </script>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ Управление Картинкой -->
+
+
+
+    <!-- ___________________________________________________________ -->
+    <h1>Впиши В Виде Пароля И Этот Же Текст Появится Ниже (Не Рабоатет)</h1>
+    <br>
+    <br>
+    <input type="password" id="input"><br>
+    <input type="text" id="results" disabled>
+    <input type="submit" value="OK" onclick="go();">
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ Впиши Текст Звёздочками И Он Появится Ниже Норм Текстом! -->
+
+
+
+    <!-- ___________________________________________________________  -->
+    <h1>Коородинаты Твоего Клика</h1>
+    <h1>
+      <p id="loq"></p>
+    </h1>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ показывает корды клика  -->
+
+
+
+    <!-- ___________________________________________________________  -->
+    <h1>Координаты Твоей Мыши</h1>
+    <h1>
+      <div id="elem">0 : 0</div>
+    </h1>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ ведешь мышкой и показываются корды -->
+
+
+
+    <!-- ___________________________________________________________ -->
+    <h1>Оставить Комментарий (Не Работает)</h1>
+    <center>
+      <br>
+      <input class="btmk" type="submit" value="Оставить Комментарий" onclick="go();">
+
+      <br> Введите Имя:
+      <br>
+      <input type="text" id="input">
+      <br> Введите Текст:
+      <br>
+      <input type="text" id="input2">
+      <br>
+      <br>
+      <textarea id="result" cols="10" rows="1" disabled></textarea>
+      <br>
+      <textarea id="result2" cols="30" rows="10" disabled></textarea>
+    </center>
+    </header>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ оставить комменатрий -->
+
+
+
+    <!-- ___________________________________________________________ -->
+    <h1>Нажимая На Кнопку, В Консоль Выводиться Это Действие (Не Работает)</h1>
+    <button class="red" onclick="red()">Нажми На Кнопку, Потом F 12 И Станешь Чушкой)</button>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ Кнопка выводящая в консоль что чел нажал на неё (не работает) -->
+
+
+
+    <!-- ___________________________________________________________  -->
+    <h1>Кнопка Очистки (Не Работает)</h1>
+    <input>
+    <p id="log"></p>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________  Кнопка Очистки (не работает) -->
+
+
+
+    <!-- ___________________________________________________________  -->
+    <h1>Непонятно что)</h1>
+    <button onclick="bebra()"></button>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ капец какая мелкаяя кнопка, при нажатии на которую открется новая страница с цифрой 1... -->
+
+
+    <!-- ___________________________________________________________ -->
+    <h1>Карты. При Наведении На Любую Она Выдвинется Вперёд</h1>
+    <p class="card">
+      <img src="../app/двойка пики.svg" alt="2" class="two" />
+      <img src="../app/двойка черви.png" alt="22" class="twotwo" />
+      <img src="../app/десятка пики.svg" alt="10" class="ten" />
+    </p>
+
+
+    <p class="card">
+      <img src="images/3.png" alt="2" class="two" />
+      <img src="images/7.png" alt="22" class="twotwo" />
+      <img src="images/ace.png" alt="10" class="ten" />
+    </p>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ Код для карт -->
+
+
+
+    <!-- ___________________________________________________________ -->
+    <h1>Счётчик От 1 До 10 (Не Работает)</h1>
+    <form action="handler.php">
+      <p>Выбери Число От 1 до 10:</p>
+      <p><input type="number" name="t" min="1" max="10" step="1"></p>
+    </form>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ Счётчик от 1 до 10 (не работает вроде)-->
+
+
+
+    <!-- ___________________________________________________________  -->
+    <h1>Гиперссылка При Нажатии На Которую Этот Сайт Не Закроется, А Откроется Новая Страница</h1>
+    <h1><a target="_blank" href="https://html5book.ru/osnovy-html/">Нажми</a></h1>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________  Ссылка Псосле Нажаптия На Которую Не Закрывается Сайт -->
+
+
+
+
+    <!-- ___________________________________________________________ -->
+    <h1>Анимированная Кнопка Которая Переливается Градиентом При Наведении На Неё</h1>
+    <button class="button">
+      <span>Наведи на меня. Я - офигенна!</span>
+    </button>
+    <script>
+      document.querySelector('.button').onmousemove = function (e) {
+        var x = e.pageX - e.target.offsetLeft;
+        var y = e.pageY - e.target.offsetTop;
+        e.target.style.setProperty('--x', x + 'px');
+        e.target.style.setProperty('--y', y + 'px');
+      };
+    </script>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ Топовая Кнопочка) -->
+
+    <!-- ___________________________________________________________ -->
+    <h1>Фрагмент Из Гугл Карт (Да Это Улица На Которой Я Живу, Не Надо Ехать Ко Мне В Гости Из Мухасранска)</h1>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1451.2981089587704!2d104.25132562699476!3d52.28364589598904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da824bde91ffbfb%3A0x1310e98a6c0a300f!2z0YPQuy4g0JPQvtCz0L7Qu9GPLCAyMi0yNCwg0JjRgNC60YPRgtGB0LosINCY0YDQutGD0YLRgdC60LDRjyDQvtCx0LsuLCA2NjQwMDU!5e0!3m2!1sru!2sru!4v1647764380093!5m2!1sru!2sru"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ Гугл Карты -->
+
+
+    <!-- ___________________________________________________________ -->
+    <h1>Выпадающий Список Из 10 Цифр (Не Работает)</h1>
+    <button onclick="num();">1...10</button>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ 10 цифр столбиком (больших) -->
+
+
+    <!-- ___________________________________________________________ -->
+    <h1>Анимированный Мячик</h1>
+    <div class="stage">
+      <figure class="ball"></figure>
+    </div>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ анимация мячика -->
+
+
+
+    <!-- ___________________________________________________________ -->
+    <h1>Гиперссылка Без Выделений</h1>
+    <h1><a href="http://Uroki-HTML.ru/html/html_links.php#tips">Ссылка</a></h1>
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ Гиперссылка Без Выделений -->
+
+
+    <!-- ___________________________________________________________ -->
+    <script type="text/javascript">
+      function nextSize(i, way, length) {
+        if (way == 1)
+          return 30 * Math.abs(Math.sin(i / (length / Math.PI)));
+        else
+        if (way == 2)
+          return 100 * Math.abs(Math.cos(i / (length / Math.PI)));
+      }
+
+      function sizeCycle(text, way, d) {
+        out = "";
+        for (i = 0; i < text.length; i++) {
+          size = parseInt(nextSize(i + d, way, text.length));
+          out += "<span style='font-size: " + size + "pt'>" + text.substring(i, i + 1) + "</span>";
+        }
+        document.getElementById("wave").innerHTML = out;
+      }
+
+      function doWave(text, n) {
+        sizeCycle(text, 1, n);
+        if (n > text.length) n = 0;
+        setTimeout("doWave(\"" + text + "\", " + (n + 1) + ")", 50);
+      }
+    </script>
+
+    <div id="wave"></div>
+    <!-- ___________________________________________________________ слово с анимацией волны -->
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- ___________________________________________________________ -->
+    <p><span id="my_timer" style="color: #f00; font-size: 150%; font-weight: bold;">00:00:10</span></p>
+    <button onclick="startTimer()" id="my_timer">Запуск</button>
+
+    <script type="text/javascript">
+      function startTimer() {
+        var my_timer = document.getElementById("my_timer");
+        var time = my_timer.innerHTML;
+        var arr = time.split(":");
+        var h = arr[0];
+        var m = arr[1];
+        var s = arr[2];
+        if (s == 0) {
+          if (m == 0) {
+            if (h == 0) {
+              var bb = document.getElementById("bb");
+              bb.style.display = "none";
+
+              var vi = document.getElementById("vi");
+              vi.style.display = "block";
+              // alert("Ну ты попуск конечно");
+              // window.location.reload();
+              // return;
+            }
+            h--;
+            m = 60;
+            if (h < 10) h = "0" + h;
+          }
+          m--;
+          if (m < 10) m = "0" + m;
+          s = 59;
+        } else s--;
+        if (s < 10) s = "0" + s;
+        document.getElementById("my_timer").innerHTML = h + ":" + m + ":" + s;
+        setTimeout(startTimer, 1000);
+      }
+    </script>
+  </div>
+  <!-- ___________________________________________________________ таймер -->
+  <h1>_____________________________________________________________________________________________________________</h1>
+  <!-- // ___________________________________________________________ -->
+  <script type="text/javascript">
+    function showOrHide(cb, cat) {
+      cb = document.getElementById(cb);
+      cat = document.getElementById(cat);
+      if (cb.checked) cat.style.display = "block";
+      else cat.style.display = "none";
+    }
+  </script>
+
+
+  <div>
+    <input type='checkbox' id='cb1' onchange='showOrHide("cb1", "cat1");' />1 + 1 = ?
+    <br />
+    <div id='cat1' style='display: none;'>3</div>
+    <input type='checkbox' id='cb2' onchange='showOrHide("cb2", "cat2");' />2 + 2 = ?
+    <br />
+    <div id='cat2' style='display: none;'>fish</div>
+    <input type='checkbox' id='cb3' onchange='showOrHide("cb3", "cat3");' />2 + 2 * 2 = ?
+    <br />
+    <div id='cat3' style='display: none;'>8</div>
+  </div>
+  <!-- // ___________________________________________________________ выпадающий список, когда отмечаешь галочку в квадрате -->
+  <h1>_____________________________________________________________________________________________________________</h1>
+  <!-- ___________________________________________________________ -->
+  <script type="text/javascript">
+    function animateText(id, text, i) {
+      document.getElementById(id).innerHTML = text.substring(0, i);
+      i++;
+      if (i > text.length) i = 0;
+      setTimeout("animateText('" + id + "','" + text + "'," + i + ")", 100);
+    }
+  </script>
+
+  <span id='dynamic-text'></span>
+  <!-- ___________________________________________________________ анимация появления текста -->
+  <h1>_____________________________________________________________________________________________________________</h1>
+  <!-- __________________________________________________________ -->
+  <span style='font-size:12.0pt;margin-left: 65%'>
+    <script type="text/javascript">
+      // Подзаголовок (h2)
+      var subtitle = "Пройди тест ниже и стань умнее Инштейна (Возможно)";
+      // Это ваши вопросы
+      var questions = [{
+          text: "Является ли элемент «else» обязательным в конструкции условия?:",
+          answers: ["Да",
+            "Нет",
+            "Зависит от версии JavaScript",
+            "хз"
+          ],
+          correctAnswer: 1 // нумерация ответов с нуля!
+        },
+        {
+          text: "Какой из этих знаков выполняет не только арифметические операции?:",
+          answers: ["*",
+            "-",
+            "%",
+            "/"
+          ],
+          correctAnswer: 3
+        },
+        {
+          text: "Какое количество раз выполнится этот цикл? for (var Counter = 0; Counter < 10; Counter = Counter + 1) {Counter++;}:",
+          answers: ["0",
+            "1",
+            "5",
+            "10"
+          ],
+          correctAnswer: 3
+        },
+        {
+          text: "Какой метод удаляет последний элемент массива?:",
+          answers: [" .push()",
+            ".pop()",
+            ".shift()",
+            ".unshift()",
+          ],
+          correctAnswer: 1
+        },
+        {
+          text: "Как правильно написать начало for цикла?:",
+          answers: ["for (i = 0; i <= 5)",
+            "for (i = 0; i <= 5; i++)",
+            "for i = 1 to 5",
+            "for (i <= 5; i++)",
+          ],
+          correctAnswer: 1
+        },
+        {
+          text: "Какой из указанных методов добавляет элемент в конец массива?:",
+          answers: [".push()",
+            ".pop()",
+            ".shift()",
+            ".unshift()",
+          ],
+          correctAnswer: 0
+        }
+      ];
+
+
+
+
+
+      var yourAns = new Array;
+      var score = 0;
+
+      function Engine(question, answer) {
+        yourAns[question] = answer;
+      }
+
+      function Score() {
+        var answerText = "Результаты:\n";
+        for (var i = 0; i < yourAns.length; ++i) {
+          var num = i + 1;
+          answerText = answerText + "\n    Вопрос №" + num + "";
+          if (yourAns[i] != questions[i].correctAnswer) {
+            answerText = answerText + "\n    Правильный ответ: " +
+              questions[i].answers[questions[i].correctAnswer] + "\n";
+          } else {
+            answerText = answerText + ": Верно! \n";
+            ++score;
+          }
+        }
+
+        answerText = answerText + "\nВсего правильных ответов: " + score + "\n";
+
+        alert(answerText);
+        yourAns = [];
+        score = 0;
+        clearForm("quiz");
+      }
+
+      function clearForm(name) {
+        var f = document.forms[name];
+        for (var i = 0; i < f.elements.length; ++i) {
+          if (f.elements[i].checked)
+            f.elements[i].checked = false;
+        }
+      }
+    </script>
+
+    <style>
+      span.quest {
+        font-weight: bold;
+      }
+    </style>
+
+    <h1>
+      <script>
+        document.write(title)
+      </script>
+    </h1>
+    <h2>
+      <script>
+        document.write(subtitle)
+      </script>
+    </h2>
+
+    <form name="quiz">
+      <ol>
+        <script>
+          for (var q = 0; q < questions.length; ++q) {
+            var question = questions[q];
+            var idx = 1 + q;
+
+            document.writeln('<li><span class="quest">' + question.text + '</span><br/>');
+            for (var i in question.answers) {
+              document.writeln('<input type=radio name="q' + idx + '" value="' + i +
+                '" onClick="Engine(' + q + ', this.value)">' + question.answers[i] + '<br/>');
+            }
+          }
+        </script>
+      </ol>
+      <input type="button" onClick="Score()" value="Проверить результаты" />
+    </form>
+    <!-- __________________________________________________________ Тест Для Очень Умных Людей-->
+    <h1>_____________________________________________________________________________________________________________
+    </h1>
+    <!-- __________________________________________________________  -->
+    <style>
+      ul {
+        width: 500px;
+        /* Ширина меню */
+        list-style: none;
+        /* Для списка убираем маркеры */
+        margin: 0;
+        /* Нет отступов вокруг */
+        padding: 0;
+        /* Убираем поля вокруг текста */
+        font-family: Arial, sans-serif;
+        /* Рубленый шрифт для текста меню */
+        font-size: 10pt;
+        /* Размер названий в пункте меню */
+      }
+
+      li ul {
+        position: absolute;
+        /* Подменю позиционируются абсолютно */
+        display: none;
+        /* Скрываем подменю */
+        margin-left: 165px;
+        /* Сдвигаем подменю вправо */
+        margin-top: -2em;
+        /* Сдвигаем подменю вверх */
+      }
+
+      li a {
+        display: block;
+        /* Ссылка как блочный элемент */
+        padding: 5px;
+        /* Поля вокруг надписи */
+        text-decoration: none;
+        /* Подчеркивание у ссылок убираем */
+        color: #666;
+        /* Цвет текста */
+        border: 1px solid #ccc;
+        /* Рамка вокруг пунктов меню */
+        background-color: #f0f0f0;
+        /* Цвет фона */
+        border-bottom: none;
+        /* Границу снизу не проводим */
+      }
+
+      li a:hover {
+        color: #ffe;
+        /* Цвет текста активного пункта */
+        background-color: #5488af;
+        /* Цвет фона активного пункта */
+      }
+
+      li:hover ul {
+        display: block;
+        /* При выделении пункта курсором мыши отображается подменю */
+      }
+
+      .brd {
+        border-bottom: 1px solid #ccc;
+        /* Линия снизу */
+      }
+    </style>
+    </head>
+
+    <h1>Выпадающий Список (Блюда Разных Стран)</h1>
+
+    <ul class="menu">
+      <li><a href="russian.html">Русская кухня</a>
+        <ul>
+          <li><a href="linkr1.html">Бефстроганов</a></li>
+          <li><a href="linkr2.html">Гусь с яблоками</a></li>
+          <li><a href="linkr3.html">Крупеник новгородский</a></li>
+          <li><a href="linkr4.html" class="brd">Раки по-русски</a></li>
+        </ul>
+      </li>
+
+      <li><a href="caucasus.html">Кавказская кухня</a>
+        <ul>
+          <li><a href="linkc1.html">Суп-харчо</a></li>
+          <li><a href="linkc2.html">Лилибдж</a></li>
+          <li><a href="linkc3.html">Чихиртма</a></li>
+          <li><a href="linkc4.html" class="brd">Шашлык</a></li>
+        </ul>
+      </li>
+      <div class="block"></div>
+      <!-- __________________________________________________________ выпадющий Список -->
+      <h1>_____________________________________________________________________________________________________________
+      </h1>
+      <!-- __________________________________________________________  -->
+      Придумайте Пароль: <br>
+      <input onkeyup="check();" type="password" id="pass1"><br>
+      Повторите Пароль: <br>
+      <input onkeyup="check();" type="password" id="pass2">
+
+
+
+      <script>
+        function check() {
+          pass1 = document.getElementById("pass1").value;
+          pass2 = document.getElementById("pass2").value;
+          if (pass1 == pass2) {
+            document.getElementById("pass2").style.background = "green";
+            document.getElementById("pass1").style.background = "green";
+          } else {
+            document.getElementById("pass1").style.background = "red";
+            document.getElementById("pass2").style.background = "red";
+          }
+
+        }
+        var pass = "";
+        while (pass != "0000") {
+          pass = prompt("Пароль?)")
+          document.write("Добро Пожаловать)")
+        }
+      </script>
+      <!-- __________________________________________________________ создание пароля и подтверждение его, а также вписывание пароля при входе на сайт -->
+      <h1>_____________________________________________________________________________________________________________
+      </h1>
+      <!-- ___________________________________________________________  -->
+      <script type="text/javascript">
+        var total_pics_num = 2; // колличество изображений
+        var interval = 1000; // задержка между изображениями
+        var time_out = 1; // задержка смены изображений
+        var i = 0;
+        var timeout;
+        var opacity = 100;
+
+        function fade_to_next() {
+          opacity--;
+          var k = i + 1;
+          var image_now = 'image_' + i;
+          if (i == total_pics_num) k = 1;
+          var image_next = 'image_' + k;
+          document.getElementById(image_now).style.opacity = opacity / 100;
+          document.getElementById(image_now).style.filter = 'alpha(opacity=' + opacity + ')';
+          document.getElementById(image_next).style.opacity = (100 - opacity) / 100;
+          document.getElementById(image_next).style.filter = 'alpha(opacity=' + (100 - opacity) + ')';
+          timeout = setTimeout("fade_to_next()", time_out);
+          if (opacity == 1) {
+            opacity = 100;
+            clearTimeout(timeout);
+          }
+        }
+        setInterval(
+          function () {
+            i++;
+            if (i > total_pics_num) i = 1;
+            fade_to_next();
+          }, interval
+        );
+      </script>
+
+
+      <div>
+        <img src='../main/app/мемчик 2.jpg' id="image_1" style="position: absolute;" />
+        <img src='../main/app/шлёпа.jpg' id="image_2"
+          style="opacity: 0; filter: alpha(opacity=0); position: absolute;" />
+        <!-- <img src='../main/app/мемчик 3.jpg' style="opacity: 0; filter: alpha(opacity=0); position: absolute;" /> -->
+        <!-- <img src='../main/app/мемчик 4.jpg' id="image_3" style="opacity: 0; filter: alpha(opacity=0); position: absolute;" /> -->
+      </div>
+      <!-- ___________________________________________________________ плавная смена изображения другим изображением -->
+      <h1>_____________________________________________________________________________________________________________
+      </h1>
+
+
+
+      <script src="../js/script.js"></script>
+      <script src="../js/example.js"></script>
+      <script src="../main/js/script.js"></script>
+</body>
+
+</html>

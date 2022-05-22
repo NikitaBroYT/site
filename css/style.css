@@ -1,0 +1,329 @@
+
+/* * {
+  margin: 0;
+  padding: 0;
+  color:aqua;
+  background-color:#4B0082 ;
+} */
+
+
+
+/* #h1 {
+  font-size: 400%;
+  color: red;
+  margin-left: 20%;
+  font-family: 'Neonderthaw', cursive;
+} */
+
+/* h1 {
+  animation: blink .99s;
+  animation-iteration-count: infinite;
+  animation-delay: 10s;
+  animation-timing-function: ease-in;
+  animation-timing-function: steps(7);
+  transform: skewY(111); */
+/*
+} */
+
+@keyframes blink {
+  0% {opacity: 1;}
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+h2 {
+  color: navy;
+  font-size: 200%;
+}
+
+img {
+  width: 1000px;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #FFF;
+}
+
+/* ============= Animation background ========= */
+.background {
+  background: linear-gradient(132deg, #BA55D3, #8A2BE2, #4B0082);
+  background-size: 1000% 1000%;
+  animation: Gradient 1.1s ease infinite;
+  position: relative;
+  height: 500vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0px;
+}
+
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 5px;
+  height: 5px;
+  border: solid 1px #D7D4E4;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 3\s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+  border-color: #FFF;
+}
+
+.cube:nth-child(2) {
+  animation-delay: 1s;
+  left: 25vw;
+  top: 40vh;
+}
+
+.cube:nth-child(3) {
+  animation-delay: 2s;
+  left: 75vw;
+  top: 50vh;
+}
+
+.cube:nth-child(4) {
+  animation-delay: 3s;
+  left: 90vw;
+  top: 10vh;
+}
+
+.cube:nth-child(5) {
+  animation-delay: 4s;
+  left: 10vw;
+  top: 85vh;
+}
+
+.cube:nth-child(6) {
+  animation-delay: 5s;
+  left: 50vw;
+  top: 10vh;
+}
+
+/* ================= Header ============ */
+header {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar */
+nav {
+  color: #FFF;
+  float: right;
+  margin: 30px 90px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  float: left;
+  transition: .3s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #EFEEF5;
+  transition: .5;
+  font-size: 15px;
+  margin-left: 16px;
+}
+
+nav ul li:hover a {
+  text-decoration: none;
+  color: #1b65c5;
+  ;
+}
+
+nav ul li:hover {
+  height: 45px;
+  padding-top: 30px;
+  margin-top: -30px;
+  background: #EFEEF5;
+  text-decoration: none;
+  transform: skew(15deg);
+}
+
+/* Logo */
+.logo {
+  width: 90px;
+  height: 40px;
+  background: #EFEEF5;
+  margin: 40px 63px;
+  float: left;
+  transform: rotate(-30deg);
+}
+
+.logo span {
+  color: #1bc570;
+  font-size: 2em;
+  line-height: 1.4;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+/* Header content & title & button*/
+.header-content {
+  margin-top: 25%;
+  text-align: center;
+  color: #EFEEF5;
+}
+
+.header-content h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 1px;
+}
+
+.header-content p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 20px auto;
+}
+
+.header-content button {
+  width: 140px;
+  margin: 20px 10px;
+  color: #06053a;
+  font-size: 17px;
+  border: 1px solid #EFEEF5;
+  font-weight: 500;
+  background: #EFEEF5;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.header-content button:hover {
+  border-radius: 0;
+}
+
+/* Animate Background*/
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+
+#i8 {
+  margin-left: 500px;
+  position: relative;
+}
+
+
+.pistolet {
+  background-color:black;
+  height: 200px;
+  width: 500px;
+}
+
+.pulia {
+  position: absolute;
+  background-color: red;
+  height: 5px;
+  width: 100px;
+  top: 40px;
+  left: 200px;
+  animation-name: bah;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+}
+
+@keyframes bah {
+  0% {left: 200px;}
+  100% {left: 1000px;}
+}
+
+
+.card IMG { position: relative; }
+.two { top: 50px; left: 55px; z-index: 5; }
+.twotwo { left: -120px; top: 25px; z-index: 2; }
+.ten { left: -295px; z-index: 1; }
+
+
+img {
+
+  width: 150px;
+  height: 250px;
+}
+
+
+.стрелка_вверх {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.стрелка_влево {
+  position: fixed;
+  top: 300px;
+  left: 150px;
+}
+.стрелка_вправо {
+  position: fixed;
+  top: 400px;
+  left: 145px;
+}
+
+#кчау{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+
+
+
+/* h1 {
+	box-shadow:10px 10px 10px #777;
+} */
+
+h1:active {
+	background-color: black;
+	color: white;
+}
+
